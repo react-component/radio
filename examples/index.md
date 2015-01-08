@@ -10,6 +10,9 @@
 
 ````js
 /** @jsx React.DOM */
+window.process = {
+	env:''
+}
 var Radio = require('../');
 var React = require('react');
 
