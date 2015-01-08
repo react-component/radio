@@ -54,12 +54,12 @@ describe('rc-radio', function (){
       	  index = options.length-1;
       radio.setProps({
         onSelect: function (d) {
-          expect(radio.state.currentIndex).to.be(index);
+          expect(d).to.be(index);
           done();
         }
       }, function () {
         item = TestUtils.scryRenderedDOMComponentsWithClass(radio, 'rc-radio')[index];
-        Simulate.click(item);
+        Simulate.click(item.getDOMNode().getElementsByTagName('input')[0]);
       });
     });
 
