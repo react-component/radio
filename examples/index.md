@@ -1,19 +1,17 @@
-# rc-radio@1.x demo
+# rc-radio@1.0.0
 ---
 
-<link rel="stylesheet" href="../assets/radio.css">
-
-
-## render
+<link rel="stylesheet" href="../assets/index.css">
 
 ````html
-<div id='react-content-standalone'></div>
+<div id='ex1'>
+</div>
 ````
 
 ````js
 /** @jsx React.DOM */
-var React = require('react');
 var Radio = require('../');
+var React = require('react');
 
 var options =  [{
       value:1,
@@ -28,14 +26,19 @@ var options =  [{
       value:4,
       text:'高圆圆'
     }];
-function select(index, option) {
-  document.getElementById('result').innerHTML = '你选择了'+option.text;  
-}
 
 React.render(
-  <div className="rc-radio-demo">
-    <h3>你最喜欢的女星是？</h3>
-    <Radio name="rc-radio" options = {options} onSelect = {select}/>
-    <span id="result"></span>
-  </div>, document.getElementById('react-content-standalone'));
+	<div className="form">
+		<div>
+			<h2>你最喜欢的武侠小说是</h2>
+			<div>
+				<input type="text"/>
+			</div>
+		</div>
+		<div className="rc-radio-demo">
+			<h2>你最喜欢的女星是</h2>
+			<Radio name="rc-radio" options= {options} />
+		</div>
+	</div>
+	, document.getElementById('ex1'));
 ````
