@@ -11,12 +11,12 @@ react rc-radio component
 
 [npm-image]: http://img.shields.io/npm/v/rc-radio.svg?style=flat-square
 [npm-url]: http://npmjs.org/package/rc-radio
-[travis-image]: https://img.shields.io/travis/react-component/rc-radio.svg?style=flat-square
-[travis-url]: https://travis-ci.org/react-component/rc-radio
-[coveralls-image]: https://img.shields.io/coveralls/react-component/rc-radio.svg?style=flat-square
-[coveralls-url]: https://coveralls.io/r/react-component/rc-radio?branch=master
-[gemnasium-image]: http://img.shields.io/gemnasium/react-component/rc-radio.svg?style=flat-square
-[gemnasium-url]: https://gemnasium.com/react-component/rc-radio
+[travis-image]: https://img.shields.io/travis/react-component/radio.svg?style=flat-square
+[travis-url]: https://travis-ci.org/react-component/radio
+[coveralls-image]: https://img.shields.io/coveralls/react-component/radio.svg?style=flat-square
+[coveralls-url]: https://coveralls.io/r/react-component/radio?branch=master
+[gemnasium-image]: http://img.shields.io/gemnasium/react-component/radio.svg?style=flat-square
+[gemnasium-url]: https://gemnasium.com/react-component/radio
 [node-image]: https://img.shields.io/badge/node.js-%3E=_0.10-green.svg?style=flat-square
 [node-url]: http://nodejs.org/download/
 [download-image]: https://img.shields.io/npm/dm/rc-radio.svg?style=flat-square
