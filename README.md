@@ -44,6 +44,8 @@ npm start
 
 http://localhost:9090/tests/runner.html?coverage
 
+https://travis-ci.org/react-component/radio
+
 ## Coverage
 
 http://localhost:9090/node_modules/rc-server/node_modules/node-jscover/lib/front-end/jscoverage.html?w=http://localhost:9090/tests/runner.html?coverage

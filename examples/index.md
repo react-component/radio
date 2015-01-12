@@ -5,14 +5,13 @@
 
 ````html
 <div id='ex1'>
+  加载中... 请稍候
 </div>
 ````
 
 ````js
 /** @jsx React.DOM */
-window.process = {
-	env:''
-}
+
 var Radio = require('../');
 var React = require('react');
 
