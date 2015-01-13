@@ -1,15 +1,18 @@
 {
   "name": "rc-radio",
   "version": "1.0.4",
-  "description": "rc-radio ui component for react",
+  "description": "radio ui component for react",
   "keywords": [
     "react",
     "react-component",
-    "react-rc-radio",
+    "react-radio",
     "rc-radio"
   ],
   "homepage": "http://github.com/react-component/radio",
-  "author": "308512341@qq.com",
+  "maitainers": [
+    "308512341@qq.com",
+    "yiminghe@gmail.com"
+  ],
   "repository": {
     "type": "git",
     "url": "git@github.com:react-component/rc-radio.git"
@@ -19,8 +22,8 @@
   },
   "licenses": "MIT",
   "spm": {},
-  "config":{
-    "port":9090
+  "config": {
+    "port": 9090
   },
   "scripts": {
     "less": "rc-tools run less",
@@ -67,9 +70,6 @@
   "spm": {
     "dependencies": {
       "react": "~0.12.1"
-    },
-    "output": [
-      "lib/*.js"
-    ]
+    }
   }
 }
