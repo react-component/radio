@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'iconfont';
+  font-family: 'rc-radio-iconfont';
   src: url('http://at.alicdn.com/t/font_1420618507_9983392.eot'); /* IE9*/
   src: url('http://at.alicdn.com/t/font_1420618507_9983392.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
   url('http://at.alicdn.com/t/font_1420618507_9983392.woff') format('woff'), /* chrome、firefox */
@@ -7,18 +7,18 @@
   url('http://at.alicdn.com/t/font_1420618507_9983392.svg#iconfont') format('svg'); /* iOS 4.1- */
 }
 
-.iconfont {
-    font-family: "iconfont";
+.rc-radio-iconfont {
+    font-family: "rc-radio-iconfont";
     font-style: normal;
 }
 
-.rc-checkbox, .rc-radio{
+.rc-radio{
   &:focus {
     outline: 0 none;
   }
   
-  &.rc-focus {
-    .iconfont {
+  &.rc-radio-focus {
+    .rc-radio-iconfont {
       box-shadow:0px 0px 8px #06C;
     }
   }
@@ -26,15 +26,11 @@
   label {
     display: block;
   }
-  .iconfont{
+  .rc-radio-iconfont{
     font-size: 20px;
     border-radius:10px;   
   }
   input{
     display: none;
   }
-}
-
-.rc-radio-demo i{
-	color: #288df0;
 }
