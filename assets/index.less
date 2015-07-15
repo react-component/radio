@@ -1,36 +1,83 @@
-@font-face {
-  font-family: 'rc-radio-iconfont';
-  src: url('http://at.alicdn.com/t/font_1420618507_9983392.eot'); /* IE9*/
-  src: url('http://at.alicdn.com/t/font_1420618507_9983392.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('http://at.alicdn.com/t/font_1420618507_9983392.woff') format('woff'), /* chrome、firefox */
-  url('http://at.alicdn.com/t/font_1420618507_9983392.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-  url('http://at.alicdn.com/t/font_1420618507_9983392.svg#iconfont') format('svg'); /* iOS 4.1- */
-}
+@switchPrefixCls:rc-radio;
 
-.rc-radio-iconfont {
-    font-family: "rc-radio-iconfont";
-    font-style: normal;
-}
+@duration:.3s;
+@ease-in-out-circ:cubic-bezier(0.78, 0.14, 0.15, 0.86);
+@ease-out-back:cubic-bezier(0.18, 0.89, 0.32, 1.28);
 
-.rc-radio{
-  &:focus {
-    outline: 0 none;
+.@{switchPrefixCls}{
+  position: relative;
+  display: inline-block;
+  transition: all @duration @ease-in-out-circ;
+  margin-right: 10px;
+  font-size: 12px;
+  & label{
+    cursor: pointer;
   }
-  
-  &.rc-radio-focus {
-    .rc-radio-iconfont {
-      box-shadow:0px 0px 8px #06C;
+  & em{
+    display: inline-block;
+    box-sizing: border-box;
+    position: relative;
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+    border-radius: 14px;
+    border: 1px solid #d9d9d9;
+    background-color: #fff;
+    transition: all @duration @ease-in-out-circ;
+    margin-right: 5px;
+    &:after{
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      left: 3px;
+      top:3px;
+      border-radius: 50% 50%;
+      background-color: #3fc7fa;
+      content: "";
+      transform: scale(0);
+      transition: transform @duration @ease-out-back;
+    }
+  }
+  &:hover{
+    & em{
+      border:1px solid #bcbcbc;
+    }
+  }
+  &:focus{
+    outline: none;
+    & em{
+      border:1px solid #bcbcbc;
+      box-shadow: 0 0 3px lighten(#bcbcbc,75%);
+    }
+  }
+  &-checked{
+    .@{switchPrefixCls}-inner {
+      left:6px;
+    }
+    & em{
+      border: 1px solid #d9d9d9;
+      background-color: #fff;
+      &:after{
+        cursor: pointer;
+        transform: scale(1);
+      }
     }
   }
 
-  label {
-    display: block;
-  }
-  .rc-radio-iconfont{
-    font-size: 20px;
-    border-radius:10px;   
-  }
-  input{
-    display: none;
+  &-disabled{
+    cursor: no-drop;
+    & label{
+      cursor: no-drop;
+    }
+    & em{
+      background: #f3f3f3;
+      border-color:#d9d9d9;
+
+      &:after{
+        background: #ccc;
+      }
+    }
+
   }
 }
+
