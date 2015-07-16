@@ -1,1 +1,1 @@
-module.exports = require('./lib/Radio');
+module.exports = require('./src/');
