@@ -2,7 +2,7 @@
  * only require other specs here
  */
 var expect = require('expect.js');
-var Checkbox = require('../index');
+var Radio = require('../index');
 var React = require('react/addons');
 var TestUtils = React.addons.TestUtils;
 var Simulate = TestUtils.Simulate;
@@ -13,7 +13,7 @@ describe('rc-switch', function () {
   document.body.appendChild(container);
 
   beforeEach(function (done) {
-    React.render(<Checkbox/>, container, function () {
+    React.render(<Radio/>, container, function () {
       inst = this;
       done();
     });
@@ -24,8 +24,8 @@ describe('rc-switch', function () {
   });
 
   it('works', function () {
-    expect(inst.state.checked).to.be(false);
+    expect(inst.refs.checkbox.state.checked).to.be(false);
     TestUtils.scryRenderedDOMComponentsWithTag(inst, 'input')[0].getDOMNode().click();
-    expect(inst.state.checked).to.be(true);
+    expect(inst.refs.checkbox.state.checked).to.be(true);
   });
 });

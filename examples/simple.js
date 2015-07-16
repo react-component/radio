@@ -2,40 +2,40 @@ require('rc-radio/assets/index.css');
 var React = require('react');
 var Radio = require('rc-radio');
 
-function onChange(e) {
-  console.log('radio checked:' + (e.target.checked));
-}
-
-
 var Test = React.createClass({
   getInitialState() {
     return {
       disabled: false,
-      checked: null
+      checked: null,
+      r: 'a'
     }
+  },
+  handleChange(e) {
+    this.setState({
+      r: e.target.value
+    })
   },
   toggle() {
     this.setState({
       disabled: !this.state.disabled
     });
   },
-  click: function (e) {
-    this.setState({
-      checked: e.target.value
-    })
-  },
   render() {
     return <div style={{margin: 20}}>
       <div>
         <p>
           <label>
-            <Radio name="rc-radio" value="a" onChange={onChange} onClick={this.click} checked={this.state.checked === "a"}
+            <Radio value="a"
+              checked = {this.state.r === 'a'}
+              onChange={this.handleChange}
               disabled={this.state.disabled}/>
           &nbsp; rc-radio
           </label>
         &nbsp;&nbsp;
           <label>
-            <Radio name="rc-radio" value="b" onChange={onChange} onClick={this.click} checked={this.state.checked === "b"}
+            <Radio value="b"
+              checked = {this.state.r === 'b'}
+              onChange={this.handleChange}
               disabled={this.state.disabled}/>
           &nbsp; rc-radio
           </label>
@@ -43,13 +43,14 @@ var Test = React.createClass({
         </p>
         <p>
           <label>
-            <input type='radio' name="radio" onChange={onChange}
+            <input type='radio' name="radio"
+              defaultChecked={true}
               disabled={this.state.disabled}/>
           &nbsp; native
           </label>
         &nbsp;&nbsp;
           <label>
-            <input type='radio' name="radio" onChange={onChange}
+            <input type='radio' name="radio"
               disabled={this.state.disabled}/>
           &nbsp; native
           </label>
