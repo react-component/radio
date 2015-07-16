@@ -27,6 +27,12 @@ react rc-radio component
 
 [![rc-radio](https://nodei.co/npm/rc-radio.png)](https://npmjs.org/package/rc-radio)
 
+## example
+
+http://localhost:9090/examples/
+
+online example: http://react-component.github.io/radio/examples/
+
 ## Usage
 
 ```js
