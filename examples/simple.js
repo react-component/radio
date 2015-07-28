@@ -48,7 +48,7 @@ webpackJsonp([0,1],[
 	          React.createElement(
 	            'label',
 	            null,
-	            React.createElement(Radio, { value: 'a',
+	            React.createElement(Radio, { value: "a",
 	              checked: this.state.r === 'a',
 	              onChange: this.handleChange,
 	              disabled: this.state.disabled }),
@@ -58,7 +58,7 @@ webpackJsonp([0,1],[
 	          React.createElement(
 	            'label',
 	            null,
-	            React.createElement(Radio, { value: 'b',
+	            React.createElement(Radio, { value: "b",
 	              checked: this.state.r === 'b',
 	              onChange: this.handleChange,
 	              disabled: this.state.disabled }),
@@ -72,7 +72,7 @@ webpackJsonp([0,1],[
 	          React.createElement(
 	            'label',
 	            null,
-	            React.createElement('input', { type: 'radio', name: 'radio',
+	            React.createElement('input', { type: 'radio', name: "radio",
 	              defaultChecked: true,
 	              disabled: this.state.disabled }),
 	            '  native'
@@ -81,7 +81,7 @@ webpackJsonp([0,1],[
 	          React.createElement(
 	            'label',
 	            null,
-	            React.createElement('input', { type: 'radio', name: 'radio',
+	            React.createElement('input', { type: 'radio', name: "radio",
 	              disabled: this.state.disabled }),
 	            '  native'
 	          ),
@@ -97,7 +97,7 @@ webpackJsonp([0,1],[
 	  }
 	});
 	
-	React.render(React.createElement(Test, null), document.getElementById('__react-content'));
+	React.render(React.createElement(Test, null), document.getElementById("__react-content"));
 
 /***/ },
 /* 2 */
@@ -390,7 +390,7 @@ webpackJsonp([0,1],[
 	  },
 	
 	  render: function render() {
-	    return React.createElement(Checkbox, _extends({}, this.props, { ref: 'checkbox' }));
+	    return React.createElement(Checkbox, _extends({}, this.props, { ref: "checkbox" }));
 	  }
 	});
 	
