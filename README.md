@@ -42,7 +42,7 @@ var Radio = require('rc-radio');
 
 ## Api
 
-same with <input type='radio' />, but only support controlled radio.
+same with `<input type="radio" />`, but only support controlled radio.
 
 ## Development
 
