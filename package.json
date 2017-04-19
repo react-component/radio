@@ -23,26 +23,26 @@
   },
   "scripts": {
     "build": "rc-tools run build",
-    "precommit": "rc-tools run precommit",
     "less": "rc-tools run less",
     "gh-pages": "rc-tools run gh-pages",
     "history": "rc-tools run history",
-    "start": "node --harmony node_modules/.bin/rc-server",
-    "publish": "rc-tools run tag",
+    "start": "rc-tools run server",
+    "pub": "rc-tools run pub",
     "lint": "rc-tools run lint",
     "saucelabs": "node --harmony node_modules/.bin/rc-tools run saucelabs",
-    "browser-test": "node --harmony node_modules/.bin/rc-tools run browser-test",
-    "browser-test-cover": "node --harmony node_modules/.bin/rc-tools run browser-test-cover"
+    "test": "rc-tools run test",
+    "chrome-test": "rc-tools run chrome-test",
+    "coverage": "rc-tools run coverage"
   },
   "devDependencies": {
     "expect.js": "~0.3.1",
     "precommit-hook": "^1.0.7",
-    "rc-server": "3.x",
-    "rc-tools": "3.x",
-    "react": "^0.13.0"
+    "rc-tools": "^5.11.4",
+    "react": "^15.0.0",
+    "react-dom": "^15.5.4"
   },
   "precommit": [
-    "precommit"
+    "lint"
   ],
   "dependencies": {
     "rc-checkbox": "1.x"
