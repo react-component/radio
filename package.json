@@ -45,6 +45,6 @@
     "lint"
   ],
   "dependencies": {
-    "rc-checkbox": "1.x"
+    "rc-checkbox": "2.x"
   }
 }
